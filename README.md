@@ -11,7 +11,7 @@ $ pip install local-attention-flax
 ## Usage
 
 ```python
-from jax import numpy as np, random
+from jax import random
 from local_attention_flax import LocalAttention
 
 attn = LocalAttention(
