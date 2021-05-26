@@ -1,0 +1,1 @@
+from local_attention_flax.local_attention_flax import LocalAttention
