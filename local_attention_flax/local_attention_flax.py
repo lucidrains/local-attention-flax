@@ -17,7 +17,7 @@ class LocalAttention(nn.Module):
         scale = dim_head ** -0.5
         window = n // wsz
 
-        qkv = nn.Dense(features = 3 * h * dim_head)(x)
+        qkv = nn.Dense(features = 3 * h * dim_head, use_bias = False)(x)
         q, k, v = np.split(qkv, 3, axis = -1)
         q, k, v = map(lambda t: rearrange(t, '(w n) (h d) -> h w n d', w = window, h = h), (q, k, v))
 
